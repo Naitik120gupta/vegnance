@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naitik Gupta - Resume</title>
+    <style>
+        /* General Resets and Typography */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Times New Roman', Times, serif; /* Mimicking LaTeX article class */
+            line-height: 1.4;
+            color: #000;
+            background-color: #fcfcfc;
+            padding: 20px;
+        }
+
+        /* Main Container */
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px 50px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Header / Contact Info */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            font-variant: small-caps;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+        
+        .contact-info {
+            font-size: 0.95em;
+        }
+        
+        .contact-info a {
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid #000;
+            margin: 0 5px;
+        }
+        
+        .contact-info a:hover {
+            color: #555;
+            border-bottom-color: #555;
+        }
+
+        /* Section Headings */
+        section {
+            margin-bottom: 15px;
+        }
+
+        h2.section-title {
+            font-size: 1.2em;
+            font-variant: small-caps;
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+            padding-bottom: 2px;
+            margin-bottom: 8px;
+        }
+
+        /* Layout for Subheadings (Role/Company & Dates/Location) */
+        .subheading-header, .subheading-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .subheading-header {
+            margin-bottom: 2px;
+        }
+
+        .subheading-details {
+            font-style: italic;
+            font-size: 0.95em;
+            margin-bottom: 5px;
+        }
+
+        .item-title {
+            font-weight: bold;
+        }
+
+        /* Projects Layout */
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        /* Lists */
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        ul li {
+            font-size: 0.9em;
+            margin-bottom: 4px;
+        }
+
+        /* Links within text */
+        .text-link {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        .text-link:hover {
+            color: #555;
+        }
+
+        /* Utility Classes */
+        .skills-list p {
+            font-size: 0.9em;
+            margin-bottom: 4px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .resume-container {
+                padding: 20px;
+            }
+            .subheading-header, .subheading-details, .project-header {
+                flex-direction: column;
+            }
+            .subheading-header span:last-child, 
+            .subheading-details span:last-child,
+            .project-header span:last-child {
+                margin-top: 2px;
+                font-size: 0.9em;
+                color: #555;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            .contact-info span {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        <header>
+            <h1>Naitik Gupta</h1>
+            <div class="contact-info">
+                <span>+91-7310918275</span> &nbsp;|&nbsp;
+                <a href="mailto:naitik12gupta05@gmail.com">naitik12gupta05@gmail.com</a> &nbsp;|&nbsp;
+                <a href="https://www.linkedin.com/in/naitik-gupta/" target="_blank">linkedin.com/in/naitik-gupta</a> &nbsp;|&nbsp;
+                <a href="https://github.com/Naitik120gupta" target="_blank">github.com/naitik120gupta</a>
+            </div>
+        </header>
+
+        <section>
+            <h2 class="section-title">Education</h2>
+            <div class="resume-item">
+                <div class="subheading-header">
+                    <span class="item-title">APJ Abdul Kalam Technical University</span>
+                    <span>2023 &ndash; 2027</span>
+                </div>
+                <div class="subheading-details">
+                    <span>Bachelor of Technology in Artificial Intelligence and Machine Learning</span>
+                    <span>Ghaziabad, UP</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Open Source Contributions</h2>
+            <div class="resume-item">
+                <div class="project-header">
+                    <span><span class="item-title">Sugar Labs</span> | <em>Python, ONNX, FastAPI, GStreamer, GTK3, Edge-AI</em></span>
+                    <span><strong>Jan. 2026 &ndash; Present</strong></span>
+                </div>
+                <ul>
+                    <li><strong>Sugar-AI (Memory Optimization)</strong> <a href="https://github.com/sugarlabs/sugar-ai/pull/45" class="text-link" target="_blank">[PR #45]</a>: Eliminated double-initialization of <code>RAGAgent</code> by redesigning lifecycle with lazy-loading and FastAPI <code>startup_event</code> dependency injection, cutting startup RAM consumption by ~50%.</li>
+                    <li><strong>Speak Activity (Pedagogical AI Safety)</strong> <a href="https://github.com/sugarlabs/speak/pull/56" class="text-link" target="_blank">[PR #56]</a>: Designed "Creative Persona" system prompt architecture after empirically disproving a 2-pass Reviewer Loop for 135M-parameter offline LLMs; pivot eliminated hallucination risk entirely by reframing model scope from encyclopedia to safe storytelling companion.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-list">
+                <ul>
+                    <li><strong>Languages & Frameworks:</strong> Python, FastAPI, Django, C++, JavaScript, WebRTC, GStreamer</li>
+                    <li><strong>Edge & Local AI:</strong> ONNX Runtime, Llama-cpp (GGUF), Small Language Models (SLMs), Local Inference</li>
+                    <li><strong>AI/ML Architecture:</strong> RAG Pipelines, Text-to-Speech (TTS), LLM Integration, Computer Vision (OpenCV)</li>
+                    <li><strong>Tools & Infrastructure:</strong> Git, GitHub Actions, Docker, Linux/GTK3 Environments, AWS, REST APIs</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Experience</h2>
+            <div class="resume-item">
+                <div class="subheading-header">
+                    <span class="item-title">Backend Engineer</span>
+                    <span>Jan. 2024 &ndash; Present</span>
+                </div>
+                <div class="subheading-details">
+                    <span>Blockchain Research Lab</span>
+                    <span>Ghaziabad, India</span>
+                </div>
+                <ul>
+                    <li>Architected blockchain data-indexing services using Django and REST APIs; built WebSocket streaming pipeline for live event monitoring, eliminating polling overhead.</li>
+                    <li>Optimized database queries via profiling and index tuning, reducing average API response latency by ~30% under load testing.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Projects</h2>
+            
+            <div class="resume-item">
+                <div class="project-header">
+                    <span><span class="item-title">NyayaGPT – RAG-Based Legal AI Assistant</span> | <em>LLMs, RAG, Vector Databases</em></span>
+                    <span><a href="https://github.com/Naitik120gupta/nyayagpt" class="text-link" target="_blank"><strong>GitHub</strong></a></span>
+                </div>
+                <ul>
+                    <li>Developed a Retrieval-Augmented Generation (RAG) system mapping natural-language crime descriptions to relevant IPC, CrPC, and IT Act sections.</li>
+                    <li>Reduced LLM hallucinations by ~50% by combining semantic retrieval with prompt-grounded generation.</li>
+                    <li>Improved legal section retrieval accuracy to ~85% over 1,500+ indexed law sections using embeddings and similarity search.</li>
+                    <li>Optimized backend inference pipeline, reducing average response latency from ~3.8s to ~2.1s (~45% improvement).</li>
+                    <li>Automated FIR draft generation, reducing manual drafting effort by ~60–70% in simulated legal workflows.</li>
+                </ul>
+            </div>
+
+            <div class="resume-item">
+                <div class="project-header">
+                    <span><span class="item-title">Gesture Vision Control – Hands-Free Media Navigation</span> | <em>OpenCV, MediaPipe, PyAutoGUI</em></span>
+                    <span><a href="https://github.com/Naitik120gupta/reels-scroller" class="text-link" target="_blank"><strong>GitHub</strong></a></span>
+                </div>
+                <ul>
+                    <li>Developed a computer vision–based gesture recognition system enabling hands-free navigation of Instagram Reels using a standard webcam.</li>
+                    <li>Achieved real-time hand tracking at ~25–30 FPS using MediaPipe, ensuring smooth and responsive gesture detection.</li>
+                    <li>Implemented gesture-to-action mapping (scroll up/down) with ~90% recognition accuracy under normal lighting conditions.</li>
+                    <li>Reduced user interaction latency to under ~150ms by optimizing frame processing and minimizing automation delays.</li>
+                    <li>Improved accessibility and usability by eliminating the need for physical input devices during media consumption.</li>
+                </ul>
+            </div>
+
+            <div class="resume-item">
+                <div class="project-header">
+                    <span><span class="item-title">Video Conferencing Application</span> | <em>Django Channels, WebSockets, WebRTC, Agora SDK</em></span>
+                    <span><a href="https://github.com/Naitik120gupta/Video-call-app" class="text-link" target="_blank"><strong>GitHub</strong></a></span>
+                </div>
+                <ul>
+                    <li>Developed a real-time video conferencing platform using WebRTC and Agora SDK, enabling stable audio/video communication with low latency.</li>
+                    <li>Implemented WebSocket-based real-time chat using Django Channels, supporting ~20–30 concurrent users per room during testing.</li>
+                    <li>Reduced average message delivery latency to under ~200ms by maintaining persistent WebSocket connections.</li>
+                    <li>Integrated secure room-based session handling, improving meeting join reliability and preventing unauthorized access.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Certifications & Achievements</h2>
+            <ul>
+                <li><strong>Career Essentials in Generative AI</strong> — Microsoft & LinkedIn <a href="https://www.linkedin.com/learning/certificates/d2c8fba2c50be1af6a2cdbf3773d1976123194ee0163f853607d000a329c2945" class="text-link" target="_blank">[Cert]</a> | <strong>Model Context Protocol: Advanced Topics</strong> — Anthropic <a href="https://verify.skilljar.com/c/xkbpzhc7vwc2" class="text-link" target="_blank">[Cert]</a></li>
+                <li>Selected among <strong>Top 10 teams out of 200+</strong> at <strong>DevQuest Hackathon, IIT Jodhpur</strong> for building <strong>VedaCare</strong>, an AI-based health analysis system using computer vision.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Leadership & Community</h2>
+            <ul>
+                <li>Core Coordinator, <strong>TEDx AKGEC</strong> — managed technical & logistics teams | Founder of <strong>geeksecurity_</strong>, educational AI and CyberSecurity community with <strong>22,000+ active followers</strong>.</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>
